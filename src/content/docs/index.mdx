@@ -1,0 +1,72 @@
+---
+title: ThesisLock
+description: Proof of existence for academic and creative documents on the Stacks blockchain, secured by Bitcoin. Hash locally, anchor on chain, verify forever.
+template: splash
+hero:
+  tagline: A permanent, verifiable timestamp for any document - without ever exposing the file. Hash it in your browser, anchor the hash on Stacks, and let anyone verify it later.
+  image:
+    file: ../../assets/logo.svg
+  actions:
+    - text: Quickstart
+      link: /quickstart/
+      icon: right-arrow
+      variant: primary
+    - text: Open the app
+      link: https://thesis-lock.vercel.app
+      icon: external
+      variant: secondary
+    - text: View on GitHub
+      link: https://github.com/Tim-cryptow/thesis-lock
+      icon: github
+      variant: minimal
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+## What ThesisLock does
+
+ThesisLock is a hash-anchoring proof-of-existence service. You drop a file into the web app; your browser hashes it with SHA-256 entirely on your device; you sign a Stacks transaction that records the hash on chain with an optional label. The document itself never leaves your machine. Anyone can later visit `/v/<hash>` to confirm when the anchor was created, which wallet created it, and what label was attached, then re-upload a file to check that its hash matches.
+
+Stacks settles to Bitcoin, so each anchor inherits Bitcoin-grade finality. The chain is always the source of truth.
+
+<CardGrid>
+  <Card title="Private by design" icon="approve-check">
+    Files are hashed client-side. Only the 32-byte digest is ever published. The content stays with you.
+  </Card>
+  <Card title="Permanent and public" icon="seti:clock">
+    Anchors are immutable on-chain records with Stacks and Bitcoin block heights you can independently verify.
+  </Card>
+  <Card title="Five contracts" icon="puzzle">
+    Single anchors, batches, a per-wallet registry, soulbound proof NFTs, and collaborative groups.
+  </Card>
+  <Card title="Built to integrate" icon="setting">
+    A read-only SDK, a CLI, a public REST API, a GitHub Action, feeds, and signed webhooks.
+  </Card>
+</CardGrid>
+
+## Start here
+
+<CardGrid>
+  <LinkCard title="Introduction" description="What proof of existence is, why Stacks and Bitcoin, and the privacy model." href="/introduction/" />
+  <LinkCard title="Quickstart" description="Anchor your first document and verify it, end to end." href="/quickstart/" />
+  <LinkCard title="Concepts" description="Anchors, batches, registry, proof NFTs, groups, and on-chain truth." href="/concepts/anchor-types/" />
+  <LinkCard title="Web app guide" description="Anchoring, groups, verification, proof NFTs, profiles, and more." href="/guides/web-app/" />
+</CardGrid>
+
+## Reference
+
+<CardGrid>
+  <LinkCard title="Smart contracts" description="All five Clarity contracts, function signatures, and error codes." href="/reference/contracts/overview/" />
+  <LinkCard title="SDK" description="The read-only TypeScript client, every method, util, and type." href="/reference/sdk/" />
+  <LinkCard title="CLI" description="verify, hash, status, search, and batch, with scripting flags." href="/reference/cli/" />
+  <LinkCard title="REST API" description="Every endpoint with params, response shapes, and examples." href="/reference/rest-api/" />
+  <LinkCard title="GitHub Action" description="Gate a CI pipeline on an on-chain anchor." href="/reference/github-action/" />
+  <LinkCard title="Feeds and Webhooks" description="RSS, Atom, JSON Feed, and signed webhook payloads." href="/reference/feeds-and-webhooks/" />
+</CardGrid>
+
+## Canonical identifiers
+
+- Deployer principal: `SP3QS6X01XKTYC84BHA0J567CZTAH67BJHN88FNVM`
+- Contract id format: `SP3QS6X01XKTYC84BHA0J567CZTAH67BJHN88FNVM.<contract-name>`
+- Live app: [thesis-lock.vercel.app](https://thesis-lock.vercel.app)
+- Source repository: [github.com/Tim-cryptow/thesis-lock](https://github.com/Tim-cryptow/thesis-lock)

@@ -1,0 +1,26 @@
+{
+  "name": "thesislock-docs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Documentation site for ThesisLock, a hash-anchoring proof-of-existence service on the Stacks blockchain.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.35.2",
+    "astro": "^5.13.0",
+    "sharp": "^0.34.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "starlight-links-validator": "^0.17.1",
+    "typescript": "^5.9.3"
+  }
+}
